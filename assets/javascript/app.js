@@ -209,8 +209,7 @@ $(".searchButton").on("click", function(e){
   });
 });
 
-// start youtube api call
-
+// / // start youtube api call
 $(".searchButton").on("click", function (e) {
   e.preventDefault();
   console.log("clickedfff")
@@ -218,7 +217,7 @@ $(".searchButton").on("click", function (e) {
       kind: "youtube#searchResult",
       part: "snippet",
       type: "video",
-      q: $(".search-input").val().replace(/%20/g, "+")+ "trailer",
+      q: $(".search-input").val().replace(/%20/g, "+") + "trailer",
       maxResults: 1,
       order: "relevance",
   })
@@ -233,7 +232,6 @@ $(".searchButton").on("click", function (e) {
       });
   });
   return false;
- 
 });
 
 
