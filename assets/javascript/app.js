@@ -7,7 +7,7 @@ function init() {
   console.log('Search Started');
   var apiKey = 'AIzaSyBi1ync9dV5CDPTmJmW135UexiYcMjmQWY';
   var q = 
-  // $('.search-input').val() + 
+  $('.search-input').val() + 
 
   gapi.client.setApiKey(apiKey);
   gapi.client.load('youtube', 'v3', function () {
