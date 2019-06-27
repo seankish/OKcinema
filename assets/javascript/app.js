@@ -1,6 +1,21 @@
 
 //On click button
 
+function init() {
+  console.log(gapi.client);
+
+  console.log('Search Started');
+  var apiKey = 'AIzaSyBi1ync9dV5CDPTmJmW135UexiYcMjmQWY';
+  var q = 
+  // $('.search-input').val() + 
+
+  gapi.client.setApiKey(apiKey);
+  gapi.client.load('youtube', 'v3', function () {
+      isLoad = true;
+  });
+  console.log('Search Request');
+}
+
 var comedyArray=["Deadpool","Bridesmaids","21 Jump Street","Hot Fuzz", "Zombieland", "The Hangover", "Airplane!", "Ghostbusters","Mean Girls", "Robin Hood Men in Tights"];
 var horrorArray=["The conjuring", "Psycho", "The conjuring 2", "the grudge", "Us", "A quiet place", "It follows", "Annable", "Paranormal Activity", "Scream"];
 var romanceArray=["The fault in our stars", "The Notebook", "Call me By your name", "A star is born", "La la land", "One day", "Love actually", "Love Story", "Pride and Prejudice", "Casablanca"];
@@ -236,17 +251,3 @@ $(".searchButton").on("click", function (e) {
 
 
 
-
-function init() {
-  console.log(gapi.client);
-
-  console.log('Search Started');
-  var apiKey = 'AIzaSyBi1ync9dV5CDPTmJmW135UexiYcMjmQWY';
-  var q = $('.search-input').val() + 
-
-  gapi.client.setApiKey(apiKey);
-  gapi.client.load('youtube', 'v3', function () {
-      isLoad = true;
-  });
-  console.log('Search Request');
-}
